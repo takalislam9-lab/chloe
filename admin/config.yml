@@ -1,0 +1,127 @@
+# Decap CMS (Netlify CMS) — configuración de gestión de contenido para CHLOE
+# El cliente edita todo desde /admin sin tocar código.
+
+backend:
+  name: git-gateway
+  branch: main # Cambiar a la rama de producción si es distinta
+
+# Para editar en local con:  npx decap-server  (y abrir /admin)
+local_backend: true
+
+# Carpeta donde se suben las imágenes desde el CMS
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+publish_mode: editorial_workflow
+site_url: https://chloealcobendas.netlify.app
+display_url: https://chloealcobendas.netlify.app
+locale: "es"
+
+collections:
+  # ---------- Ajustes generales / Hero / Contacto ----------
+  - name: "ajustes"
+    label: "Ajustes generales"
+    files:
+      - name: "settings"
+        label: "Datos del negocio, Hero y Horarios"
+        file: "content/settings.json"
+        fields:
+          - { name: business_name, label: "Nombre del negocio", widget: string }
+          - { name: tagline, label: "Eslogan corto", widget: string }
+          - { name: hero_title, label: "Título del Hero", widget: string }
+          - { name: hero_subtitle, label: "Subtítulo del Hero", widget: string }
+          - { name: hero_intro, label: "Texto de introducción del Hero", widget: text }
+          - { name: hero_image, label: "Imagen de fondo del Hero (opcional)", widget: image, required: false }
+          - { name: booksy_url, label: "Enlace de reservas (Booksy)", widget: string }
+          - { name: instagram_url, label: "Instagram", widget: string, required: false }
+          - { name: phone, label: "Teléfono (opcional)", widget: string, required: false }
+          - { name: phone_label, label: "Texto del botón de teléfono", widget: string, required: false }
+          - { name: email, label: "Email de contacto", widget: string, required: false }
+          - { name: address_street, label: "Dirección (calle y número)", widget: string }
+          - { name: address_city, label: "Código postal y ciudad", widget: string }
+          - { name: maps_query, label: "Búsqueda para Google Maps", widget: string }
+          - { name: rating, label: "Valoración media", widget: string, required: false }
+          - { name: reviews_count, label: "Número de reseñas", widget: string, required: false }
+          - name: hours
+            label: "Horario semanal"
+            widget: list
+            fields:
+              - { name: day, label: "Día", widget: string }
+              - { name: time, label: "Horario", widget: string }
+
+  # ---------- Servicios y tarifario ----------
+  - name: "servicios"
+    label: "Servicios y precios"
+    files:
+      - name: "services"
+        label: "Categorías y servicios"
+        file: "content/services.json"
+        fields:
+          - { name: intro, label: "Texto introductorio", widget: text }
+          - name: categories
+            label: "Categorías (pestañas)"
+            widget: list
+            fields:
+              - { name: id, label: "Identificador (sin espacios)", widget: string, hint: "Ej: peluqueria, estetica, nails" }
+              - { name: name, label: "Nombre de la pestaña", widget: string }
+              - { name: description, label: "Descripción de la categoría", widget: text, required: false }
+              - name: items
+                label: "Servicios"
+                widget: list
+                fields:
+                  - { name: name, label: "Nombre del servicio", widget: string }
+                  - { name: description, label: "Descripción", widget: text, required: false }
+                  - { name: price, label: "Precio", widget: string, hint: "Ej: 32€, desde 99€, consultar" }
+                  - { name: featured, label: "Destacar servicio", widget: boolean, default: false, required: false }
+
+  # ---------- Equipo ----------
+  - name: "equipo"
+    label: "Equipo"
+    files:
+      - name: "team"
+        label: "Miembros del equipo"
+        file: "content/team.json"
+        fields:
+          - name: members
+            label: "Miembros"
+            widget: list
+            fields:
+              - { name: name, label: "Nombre", widget: string }
+              - { name: role, label: "Puesto / especialidad", widget: string }
+              - { name: bio, label: "Descripción", widget: text, required: false }
+              - { name: photo, label: "Foto", widget: image, required: false }
+
+  # ---------- Lookbook / Porfolio ----------
+  - name: "porfolio"
+    label: "Lookbook / Porfolio"
+    files:
+      - name: "portfolio"
+        label: "Trabajos del porfolio"
+        file: "content/portfolio.json"
+        fields:
+          - name: items
+            label: "Trabajos"
+            widget: list
+            fields:
+              - { name: title, label: "Título del trabajo", widget: string }
+              - { name: category, label: "Categoría", widget: select, options: ["Peluquería", "Maquillaje", "Peinados", "Uñas", "Estética"] }
+              - { name: image, label: "Foto del trabajo", widget: image }
+              - { name: alt, label: "Texto alternativo (SEO/accesibilidad)", widget: string, required: false }
+
+  # ---------- Testimonios ----------
+  - name: "opiniones"
+    label: "Opiniones / Testimonios"
+    files:
+      - name: "testimonials"
+        label: "Testimonios de clientes"
+        file: "content/testimonials.json"
+        fields:
+          - { name: intro, label: "Texto introductorio", widget: text }
+          - name: items
+            label: "Testimonios"
+            widget: list
+            fields:
+              - { name: name, label: "Nombre del cliente", widget: string }
+              - { name: service, label: "Servicio realizado", widget: string, required: false }
+              - { name: rating, label: "Estrellas (1-5)", widget: number, default: 5, min: 1, max: 5 }
+              - { name: quote, label: "Opinión", widget: text }

@@ -1,0 +1,64 @@
+{
+  "intro": "Tarifas reales y transparentes. Trabajamos con marcas premium para garantizar un resultado impecable, tanto para ella como para él.",
+  "categories": [
+    {
+      "id": "peluqueria",
+      "name": "Peluquería Unisex",
+      "description": "Cortes, color y tratamientos capilares de alta gama para todos.",
+      "items": [
+        {
+          "name": "Corte de diseño / Rapado",
+          "description": "Cortes creativos, degradados y diseños personalizados.",
+          "price": "desde 10€"
+        },
+        {
+          "name": "Corte completo mujer",
+          "description": "Lavado, corte personalizado, peinado y acabado.",
+          "price": "consultar"
+        },
+        {
+          "name": "Mechas avanzadas",
+          "description": "Balayage, babylights y técnicas de iluminación a medida.",
+          "price": "desde 35€"
+        },
+        {
+          "name": "Alisado Orgánico Vegano",
+          "description": "Alisado de alta gama sin formol, respetuoso con tu cabello.",
+          "price": "desde 99€",
+          "featured": true
+        }
+      ]
+    },
+    {
+      "id": "estetica",
+      "name": "Estética & Mirada",
+      "description": "Realza tu mirada y cuida tu piel con nuestros tratamientos.",
+      "items": [
+        {
+          "name": "Depilación de cejas con hilo",
+          "description": "Técnica precisa y natural para un diseño perfecto de cejas.",
+          "price": "12€"
+        },
+        {
+          "name": "Microblading",
+          "description": "Cejas de aspecto natural pelo a pelo, de larga duración.",
+          "price": "170€",
+          "featured": true
+        }
+      ]
+    },
+    {
+      "id": "nails",
+      "name": "Nail Corner",
+      "description": "Manicura y uñas profesionales que marcan la diferencia.",
+      "items": [
+        {
+          "name": "Set Completo de Uñas Acrílicas",
+          "description": "Uñas acrílicas profesionales, resistentes y con acabado perfecto.",
+          "price": "32€",
+          "featured": true
+        }
+      ]
+    }
+  ]
+}

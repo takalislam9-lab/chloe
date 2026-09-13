@@ -1,0 +1,29 @@
+{
+  "intro": "Nuestra prioridad es tu satisfacción total. Optimizamos la agenda para respetar tu tiempo, cuidamos la puntualidad del equipo y trabajamos siempre con marcas premium.",
+  "items": [
+    {
+      "name": "Laura M.",
+      "service": "Alisado Orgánico Vegano",
+      "rating": 5,
+      "quote": "El mejor alisado que me han hecho nunca. El cabello me quedó sanísimo y el trato fue exquisito. Puntualidad total."
+    },
+    {
+      "name": "Carlos R.",
+      "service": "Corte y diseño",
+      "rating": 5,
+      "quote": "Salón unisex de verdad. Entendieron justo el corte que buscaba y la atención fue impecable. Repito seguro."
+    },
+    {
+      "name": "Nuria G.",
+      "service": "Microblading",
+      "rating": 5,
+      "quote": "Resultado natural y profesional en las cejas. Se nota que usan productos premium y que dominan la técnica."
+    },
+    {
+      "name": "Patricia L.",
+      "service": "Mechas y color",
+      "rating": 5,
+      "quote": "Me respetaron la cita a la hora exacta y el color quedó espectacular. Un equipo cercano que escucha."
+    }
+  ]
+}
