@@ -22,7 +22,7 @@
   <meta property="og:description" content="El espacio unisex definitivo para cuidarte y mimarte en Alcobendas. Peluquería, estética y nail corner con marcas premium." />
   <meta property="og:locale" content="es_ES" />
   <meta property="og:url" content="https://chloealcobendas.netlify.app/" />
-  <meta property="og:image" content="https://chloealcobendas.netlify.app/images/og-cover.jpg" />
+  <meta property="og:image" content="https://chloealcobendas.netlify.app/images/og-cover.svg" />
   <meta property="business:contact_data:street_address" content="Calle del Fuego, 46" />
   <meta property="business:contact_data:locality" content="Alcobendas" />
   <meta property="business:contact_data:postal_code" content="28100" />
@@ -32,7 +32,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="CHLOE Peluquería y Estética Unisex en Alcobendas" />
   <meta name="twitter:description" content="Peluquería y estética unisex en la Calle del Fuego, Alcobendas." />
-  <meta name="twitter:image" content="https://chloealcobendas.netlify.app/images/og-cover.jpg" />
+  <meta name="twitter:image" content="https://chloealcobendas.netlify.app/images/og-cover.svg" />
 
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 
@@ -41,30 +41,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..800;1,400..600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
-  <!-- Tailwind (CDN) -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            cream: '#FBF8F3',
-            sand: '#F3ECE1',
-            ink: '#26221E',
-            mocha: '#6B5B4C',
-            gold: '#B08D57',
-            nude: '#D8B4A6',
-          },
-          fontFamily: {
-            display: ['"Playfair Display"', 'serif'],
-            serif: ['"Cormorant Garamond"', 'serif'],
-            sans: ['Jost', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-          },
-        },
-      },
-    };
-  </script>
-  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <!-- Tailwind CSS compilado (autoalojado, sin dependencia de CDN) -->
+  <link rel="stylesheet" href="/assets/css/tailwind.css" />
 
   <!-- Structured data: Local Business (HairSalon) -->
   <script type="application/ld+json">
@@ -72,7 +50,7 @@
     "@context": "https://schema.org",
     "@type": "HairSalon",
     "name": "CHLOE Peluquería y Estética Unisex",
-    "image": "https://chloealcobendas.netlify.app/images/og-cover.jpg",
+    "image": "https://chloealcobendas.netlify.app/images/og-cover.svg",
     "url": "https://chloealcobendas.netlify.app/",
     "description": "Peluquería y centro de estética unisex en Alcobendas. Cortes, mechas, alisado orgánico vegano, microblading y uñas acrílicas.",
     "priceRange": "€€",
@@ -161,8 +139,8 @@
   <!-- ============ HERO ============ -->
   <section id="inicio" class="relative min-h-screen flex items-center overflow-hidden">
     <div class="hero-bg absolute inset-0"></div>
-    <div class="absolute inset-0 bg-gradient-to-r from-cream via-cream/85 to-cream/40"></div>
-    <div class="relative mx-auto max-w-7xl px-5 sm:px-8 pt-28 pb-16 w-full">
+    <div class="relative mx-auto max-w-7xl px-5 sm:px-8 pt-28 pb-16 w-full grid lg:grid-cols-2 gap-12 items-center">
+      <!-- Text -->
       <div class="max-w-2xl">
         <p class="text-gold uppercase tracking-[0.35em] text-xs mb-5 fade-up">Peluquería · Estética · Nail Corner · Alcobendas</p>
         <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl leading-[1.05] text-ink fade-up" style="animation-delay:.1s">
@@ -184,6 +162,17 @@
         <div class="mt-10 flex items-center gap-3 text-sm text-mocha fade-up" style="animation-delay:.4s">
           <span class="text-gold text-lg tracking-tight">★★★★★</span>
           <span><strong class="text-ink">4,4</strong> · 52 reseñas · Calle del Fuego 46, Alcobendas</span>
+        </div>
+      </div>
+      <!-- Framed image -->
+      <div class="relative hidden lg:block fade-up" style="animation-delay:.25s">
+        <div class="absolute -inset-4 border border-gold/40 rounded-[2rem] translate-x-5 translate-y-5"></div>
+        <div class="relative rounded-[2rem] overflow-hidden shadow-2xl shadow-ink/20 aspect-[4/5]">
+          <img id="hero-photo" src="/images/hero.svg" alt="CHLOE Peluquería y Estética Unisex en Alcobendas" class="w-full h-full object-cover" />
+        </div>
+        <div class="absolute -bottom-6 -left-6 bg-cream border border-sand rounded-2xl shadow-xl px-6 py-4 text-center">
+          <p class="font-display text-3xl text-ink leading-none">4,4<span class="text-gold">★</span></p>
+          <p class="text-[0.65rem] uppercase tracking-[0.2em] text-mocha mt-1">52 reseñas</p>
         </div>
       </div>
     </div>
@@ -213,8 +202,39 @@
     </div>
   </section>
 
+  <!-- ============ EXPERIENCIA (banda editorial) ============ -->
+  <section class="py-24 sm:py-28 bg-sand/40">
+    <div class="mx-auto max-w-7xl px-5 sm:px-8 grid lg:grid-cols-2 gap-12 items-center">
+      <div class="relative order-2 lg:order-1 reveal">
+        <div class="absolute -inset-4 border border-gold/40 rounded-[2rem] -translate-x-5 translate-y-5"></div>
+        <div class="relative rounded-[2rem] overflow-hidden shadow-xl shadow-ink/10 aspect-[5/4]">
+          <img src="/images/portfolio/look-01.svg" alt="Trabajo de color y mechas en CHLOE Alcobendas" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+      </div>
+      <div class="order-1 lg:order-2 reveal">
+        <p class="text-gold uppercase tracking-[0.3em] text-xs mb-4">La experiencia CHLOE</p>
+        <h2 class="font-display text-4xl sm:text-5xl text-ink leading-tight">Un salón boutique para ella y para él</h2>
+        <p class="mt-5 text-mocha font-serif text-lg leading-relaxed">
+          Sin complicaciones ni reglas estrictas: cada corte, color y peinado tiene su momento de brillar.
+          Somos personas cercanas que escuchan, aconsejan y se adaptan a lo que buscas, siempre con la
+          ilusión de que salgas feliz y con confianza.
+        </p>
+        <ul class="mt-8 space-y-3 text-ink">
+          <li class="flex items-center gap-3"><span class="text-gold">✦</span> Marcas premium y técnicas de alta gama</li>
+          <li class="flex items-center gap-3"><span class="text-gold">✦</span> Agenda optimizada y máxima puntualidad</li>
+          <li class="flex items-center gap-3"><span class="text-gold">✦</span> Alisado orgánico vegano sin formol</li>
+          <li class="flex items-center gap-3"><span class="text-gold">✦</span> Garantía de satisfacción total</li>
+        </ul>
+        <a href="https://booksy.com/es-es/81001_chloe_otro_52925_alcobendas" target="_blank" rel="noopener"
+           class="mt-9 inline-flex items-center justify-center rounded-full bg-ink text-cream px-8 py-4 text-sm uppercase tracking-[0.18em] hover:bg-gold transition-colors">
+          Reserva tu cita
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ LOOKBOOK ============ -->
-  <section id="lookbook" class="py-24 sm:py-28 bg-sand/60">
+  <section id="lookbook" class="py-24 sm:py-28 bg-cream">
     <div class="mx-auto max-w-7xl px-5 sm:px-8">
       <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
         <div class="max-w-xl">
@@ -229,7 +249,7 @@
   </section>
 
   <!-- ============ EQUIPO ============ -->
-  <section id="equipo" class="py-24 sm:py-28 bg-cream">
+  <section id="equipo" class="py-24 sm:py-28 bg-sand/40">
     <div class="mx-auto max-w-7xl px-5 sm:px-8">
       <div class="text-center max-w-2xl mx-auto">
         <p class="text-gold uppercase tracking-[0.3em] text-xs mb-4">Nuestro equipo</p>

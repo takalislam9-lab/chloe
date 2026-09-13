@@ -77,8 +77,8 @@
     if (!s) return;
 
     if (s.hero_image) {
-      const bg = $('.hero-bg');
-      if (bg) { bg.style.setProperty('--hero-image', `url("${s.hero_image}")`); bg.classList.add('has-image'); }
+      const heroPhoto = $('#hero-photo');
+      if (heroPhoto) heroPhoto.src = s.hero_image;
     }
 
     // Hours

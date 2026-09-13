@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#F3ECE1"/><stop offset="1" stop-color="#E2D0B4"/></linearGradient></defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <g opacity="0.25" fill="#8A6D42"><circle cx="1050" cy="120" r="220"/><circle cx="120" cy="560" r="160"/></g>
+  <text x="80" y="300" font-family="Georgia,'Playfair Display',serif" font-size="88" fill="#26221E">CHLOE<tspan fill="#8A6D42">.</tspan></text>
+  <text x="84" y="360" font-family="Georgia,serif" font-size="34" fill="#B08D57">Peluquería &amp; Estética Unisex · Alcobendas</text>
+  <text x="84" y="410" font-family="Arial,Helvetica,sans-serif" font-size="24" fill="#6B5B4C" letter-spacing="3">CALLE DEL FUEGO 46 · RESERVA EN BOOKSY</text>
+</svg>

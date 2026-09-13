@@ -10,10 +10,14 @@ para que el cliente edite servicios, precios, equipo, porfolio y opiniones **sin
 ## Stack
 
 - **HTML5** semántico + datos estructurados **JSON-LD** (`HairSalon`) para SEO local.
-- **Tailwind CSS** (vía CDN, sin proceso de build).
+- **Tailwind CSS** compilado y **autoalojado** en `assets/css/tailwind.css` (sin dependencia de CDN, más rápido).
+- **Google Fonts** (Playfair Display, Cormorant Garamond, Jost) + imágenes de muestra en **SVG** ligero.
 - **JavaScript** moderno (pestañas de servicios, filtro del lookbook, menú móvil, render del contenido del CMS).
 - **Decap CMS** (antes Netlify CMS) + **Netlify Identity / Git Gateway**.
 - **Netlify Forms** para el formulario de contacto.
+
+> El CSS compilado ya está incluido en el repositorio, por lo que **el sitio funciona sin
+> ningún paso de build** en Netlify. Solo necesitas recompilar si modificas el HTML/JS o el diseño.
 
 ## Estructura de archivos
 
@@ -49,6 +53,22 @@ Al usar `fetch` para cargar el contenido, ábrela con un servidor local (no con 
 python3 -m http.server 8080
 # luego abre http://localhost:8080
 ```
+
+## Modificar el diseño (recompilar Tailwind)
+
+Solo si cambias clases en el HTML/JS o los colores del tema. El CSS ya viene compilado.
+
+```bash
+npm install            # instala Tailwind (devDependency)
+npm run build:css      # genera assets/css/tailwind.css minificado
+# o, mientras editas:
+npm run watch:css
+```
+
+Los colores y tipografías se definen en `tailwind.config.js`; los estilos propios en
+`assets/css/tailwind.src.css`. Las imágenes de muestra (SVG) se generan solas y se
+sustituyen por fotos reales colocándolas en `images/portfolio/` e `images/team/`
+(o subiéndolas desde el CMS).
 
 ### Probar el CMS en local
 

@@ -4,13 +4,13 @@
       "name": "Jessica",
       "role": "Estilista & Color Specialist",
       "bio": "Especialista en mechas avanzadas, balayage y alisado orgánico vegano. Cada look, a tu medida.",
-      "photo": "/images/team/jessica.jpg"
+      "photo": "/images/team/jessica.svg"
     },
     {
       "name": "Geri",
       "role": "Estética & Nail Artist",
       "bio": "Experta en microblading, diseño de cejas con hilo y uñas acrílicas profesionales.",
-      "photo": "/images/team/geri.jpg"
+      "photo": "/images/team/geri.svg"
     }
   ]
 }

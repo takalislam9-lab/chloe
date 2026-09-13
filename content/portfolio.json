@@ -3,37 +3,37 @@
     {
       "title": "Cambio de look con balayage",
       "category": "Peluquería",
-      "image": "/images/portfolio/look-01.jpg",
+      "image": "/images/portfolio/look-01.svg",
       "alt": "Cambio de look con mechas balayage en Alcobendas"
     },
     {
       "title": "Alisado orgánico vegano",
       "category": "Peluquería",
-      "image": "/images/portfolio/look-02.jpg",
+      "image": "/images/portfolio/look-02.svg",
       "alt": "Resultado de alisado orgánico vegano"
     },
     {
       "title": "Maquillaje de invitada perfecta",
       "category": "Maquillaje",
-      "image": "/images/portfolio/look-03.jpg",
+      "image": "/images/portfolio/look-03.svg",
       "alt": "Maquillaje de invitada para evento"
     },
     {
       "title": "Peinado de evento",
       "category": "Peinados",
-      "image": "/images/portfolio/look-04.jpg",
+      "image": "/images/portfolio/look-04.svg",
       "alt": "Peinado recogido para evento"
     },
     {
       "title": "Uñas acrílicas profesionales",
       "category": "Uñas",
-      "image": "/images/portfolio/look-05.jpg",
+      "image": "/images/portfolio/look-05.svg",
       "alt": "Set completo de uñas acrílicas"
     },
     {
       "title": "Diseño de cejas con hilo",
       "category": "Estética",
-      "image": "/images/portfolio/look-06.jpg",
+      "image": "/images/portfolio/look-06.svg",
       "alt": "Diseño y depilación de cejas con hilo"
     }
   ]
